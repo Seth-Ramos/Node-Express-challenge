@@ -19,8 +19,8 @@ app.get('/contact', function(req, res){
     res.sendFile(path.join(__dirname,'/contact.html'));
 });
   
-app.use((req, res, next) => {
-    res.status(404).send("Sorry nothin here! Look somewhere else lol")
+app.get( '/unauthorized' ,(req, res,) => {
+    res.status(401).send("401 unauthorized")
   });  
 
 
